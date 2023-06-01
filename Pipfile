@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiogram = "*"
+numpy = "*"
+python-dotenv = "*"
+scikit-image = "*"
+torch = "*"
+torchvision = "*"
+matplotlib = "*"
+fastai = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

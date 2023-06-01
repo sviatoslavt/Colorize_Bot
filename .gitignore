@@ -1,0 +1,5 @@
+.env
+.venv
+models
+diplom.py
+diplom_utils.py
