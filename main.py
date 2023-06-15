@@ -15,11 +15,11 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 help_message = """
-👋 Hi! I'm a bot that can colorize your black and white photos!
+👋 Вітаю! Я бот що розфарбує твоє чорно-біле фото!
 
-Send me a photo and I'll colorize it!
+Надішли мені фотографію і я розфарбую її!
 
-Made by @sviat_dev
+Створено @svtashchuk
 """
 
 
@@ -35,7 +35,7 @@ async def handle_docs_photo(message):
         image = message.photo[-1].file_id
         file_path = await bot.get_file(image)
         downloaded_file = await bot.download_file(file_path.file_path)
-        message_id = await bot.send_message(message.chat.id, '⏳ Processing image...')
+        message_id = await bot.send_message(message.chat.id, '⏳ Обробка зображення...')
         img = await process_image(downloaded_file)
         await bot.delete_message(message.chat.id, message_id.message_id)
         result = types.InputFile(img, filename='result.png')
